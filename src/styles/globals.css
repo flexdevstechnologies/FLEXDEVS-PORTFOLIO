@@ -779,20 +779,13 @@ html {
     display: flex;
   }
 }
-.hero-circle {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #3b82f6 0%, #1e3a8a 100%);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* Hide only on mobile */
+/* ==== Disable circular animation (sphere + rings) only on mobile ==== */
 @media (max-width: 768px) {
-  .hero-circle {
+  .sphere,
+  .ring1,
+  .ring2,
+  .ring3 {
     display: none !important;
   }
 }
+

@@ -793,7 +793,7 @@ html {
 @media (max-width: 768px) {
   .hero,
   .page-hero {
-    padding-top: 15px !important;  /* drastically reduced gap */
+    padding-top: 0px !important;  /* drastically reduced gap */
     padding-bottom: 60px;          /* keep some bottom spacing for balance */
   }
 

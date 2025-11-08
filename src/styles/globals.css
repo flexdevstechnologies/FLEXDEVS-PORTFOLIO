@@ -789,3 +789,10 @@ html {
   }
 }
 
+/* ==== Reduce top gap between navbar and hero on mobile ==== */
+@media (max-width: 768px) {
+  .hero,
+  .page-hero {
+    padding-top: 60px !important; /* reduce from 100px to 60px */
+  }
+}

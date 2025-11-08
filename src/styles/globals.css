@@ -803,16 +803,18 @@ html {
   }
 }
 
-/* === FIX: Remove top blue space on mobile hero === */
+/* === FIX: Remove empty hero visual space on mobile === */
 @media (max-width: 768px) {
-  .hero,
-  .page-hero {
-    padding-top: 20px !important; /* reduce drastically but keep layout stable */
-    margin-top: 0 !important;
+  .hero-visual {
+    display: none !important; /* hides the cube/sphere area */
   }
 
-  .hero h1,
-  .page-hero h1 {
+  .hero {
+    padding-top: 20px !important; /* bring the heading closer to navbar */
+    padding-bottom: 60px;
+  }
+
+  .hero-content {
     margin-top: 0 !important;
   }
 }

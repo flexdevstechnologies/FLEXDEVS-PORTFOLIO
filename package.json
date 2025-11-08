@@ -1,8 +1,7 @@
 {
   "name": "flexdevs-site",
-  "private": true,
   "version": "1.0.0",
-  "type": "module",
+  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -16,8 +15,9 @@
     "react-helmet-async": "^2.0.5",
     "clsx": "^2.1.1"
   },
-
   "devDependencies": {
-    "vite": "^5.4.10"
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.0.12"
   }
 }
+

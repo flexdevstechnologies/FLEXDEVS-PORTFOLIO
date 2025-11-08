@@ -1,24 +1,12 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleScroll = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-      setMenuOpen(false);
-    }
-  };
-
-  const navItems = [
-    { label: "Home", id: "home" },
-    { label: "Services", id: "services" },
-    { label: "Portfolio", id: "portfolio" },
-    { label: "About", id: "about" },
-    { label: "Contact", id: "contact" },
-  ];
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <header
@@ -27,7 +15,7 @@ export default function Navbar() {
         borderBottom: "1px solid #e2e8f0",
         position: "sticky",
         top: 0,
-        zIndex: 50,
+        zIndex: 1000,
         boxShadow: "0 2px 6px rgba(0, 0, 0, 0.05)",
       }}
     >
@@ -43,14 +31,14 @@ export default function Navbar() {
         }}
       >
         {/* Logo */}
-        <div
-          onClick={() => handleScroll("home")}
+        <Link
+          to="/"
+          onClick={closeMenu}
           style={{
             display: "flex",
             alignItems: "center",
             gap: "10px",
             textDecoration: "none",
-            cursor: "pointer",
           }}
         >
           <img
@@ -72,24 +60,25 @@ export default function Navbar() {
           >
             Flexdevs Technologies
           </span>
-        </div>
+        </Link>
 
-        {/* Hamburger Icon (Mobile only) */}
+        {/* Hamburger Icon - only on mobile */}
         <button
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={toggleMenu}
           className="menu-toggle"
           style={{
-            display: "none",
             background: "none",
             border: "none",
             cursor: "pointer",
             color: "#1e3a8a",
+            fontSize: "26px",
+            display: "none",
           }}
         >
-          <span style={{ fontSize: "26px" }}>{menuOpen ? "✕" : "☰"}</span>
+          {menuOpen ? "✕" : "☰"}
         </button>
 
-        {/* Navigation Links */}
+        {/* Navbar Links */}
         <ul
           className={`nav-links ${menuOpen ? "open" : ""}`}
           style={{
@@ -101,35 +90,30 @@ export default function Navbar() {
             padding: 0,
           }}
         >
-          {navItems.map(({ label, id }) => (
-            <li key={id}>
-              <button
-                onClick={() => handleScroll(id)}
+          {["Home", "Services", "Portfolio", "About", "Contact"].map((page) => (
+            <li key={page}>
+              <a
+                href={`#${page.toLowerCase()}`}
+                onClick={closeMenu}
                 style={{
-                  background: "none",
-                  border: "none",
-                  fontSize: "1rem",
-                  fontWeight: "500",
                   color: "#334155",
-                  cursor: "pointer",
-                  transition: "color 0.3s ease",
+                  textDecoration: "none",
+                  fontWeight: "500",
+                  fontSize: "1rem",
+                  transition: "color 0.2s ease",
                 }}
                 onMouseEnter={(e) => (e.target.style.color = "#2563eb")}
                 onMouseLeave={(e) => (e.target.style.color = "#334155")}
               >
-                {label}
-              </button>
+                {page}
+              </a>
             </li>
           ))}
         </ul>
       </nav>
 
-      {/* Mobile Menu Style */}
+      {/* Mobile Styles */}
       <style>{`
-        html {
-          scroll-behavior: smooth;
-        }
-
         @media (max-width: 768px) {
           .menu-toggle {
             display: block !important;
@@ -138,20 +122,26 @@ export default function Navbar() {
           .nav-links {
             position: absolute;
             top: 70px;
-            right: 20px;
+            left: 0;
+            right: 0;
             background-color: #ffffff;
             flex-direction: column;
             align-items: center;
             gap: 20px;
             padding: 20px 0;
-            width: 180px;
-            border-radius: 10px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
             display: none;
           }
 
           .nav-links.open {
             display: flex;
+          }
+
+          /* Hide menu completely by default on mobile */
+          @media (max-width: 768px) {
+            .nav-links {
+              display: none;
+            }
           }
         }
       `}</style>

@@ -21,10 +21,10 @@ export default function Home() {
               experiences — crafted for startups, SMBs, and enterprises alike.
             </p>
             <div className="hero-buttons">
-              <Link to="/#contact" className="hero-btn primary">
+              <Link to="/contact" className="hero-btn primary">
                 Get a Free Consultation
               </Link>
-              <Link to="/#portfolio" className="hero-btn secondary">
+              <Link to="/portfolio" className="hero-btn secondary">
                 View Our Work
               </Link>
             </div>

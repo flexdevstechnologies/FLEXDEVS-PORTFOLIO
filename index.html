@@ -1,13 +1,28 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- ✅ Basic Meta Setup -->
+    <!-- ✅ Basic Metadata -->
     <meta charset="UTF-8" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "FlexDevs Technologies",
+        "url": "https://flexdevstechnologies.com/",
+        "logo": "https://flexdevstechnologies.com/FDtechlogo.png",
+        "description": "FlexDevs Technologies builds high-performance, responsive, and beautiful websites for startups and growing businesses.",
+        "sameAs": [
+          "https://www.linkedin.com/company/flexdevstechnologies",
+          "https://github.com/flexdevstechnologies"
+        ]
+      }
+    </script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- ✅ Primary SEO Meta -->
+    <!-- ✅ SEO Meta -->
     <title>FlexDevs Technologies | Web Development & UI/UX Experts</title>
     <meta
       name="description"
@@ -22,7 +37,7 @@
     <!-- ✅ Canonical URL -->
     <link rel="canonical" href="https://flexdevstechnologies.com/" />
 
-    <!-- ✅ Open Graph / Facebook Meta -->
+    <!-- ✅ Open Graph (Facebook, LinkedIn) -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://flexdevstechnologies.com/" />
     <meta
@@ -38,7 +53,7 @@
       content="https://flexdevstechnologies.com/FDtechlogo.png"
     />
 
-    <!-- ✅ Twitter Meta -->
+    <!-- ✅ Twitter Card -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://flexdevstechnologies.com/" />
     <meta
@@ -56,26 +71,13 @@
 
     <!-- ✅ Favicon -->
     <link rel="icon" type="image/png" href="/FDtechlogo.png" />
-
-    <!-- ✅ Organization Structured Data (for logo & Knowledge Graph) -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "FlexDevs Technologies",
-        "url": "https://flexdevstechnologies.com/",
-        "logo": "https://flexdevstechnologies.com/FDtechlogo.png",
-        "description": "FlexDevs Technologies builds high-performance, responsive, and beautiful websites for startups and growing businesses.",
-        "sameAs": [
-          "https://www.linkedin.com/company/flexdevstechnologies",
-          "https://github.com/flexdevstechnologies"
-        ]
-      }
-    </script>
   </head>
 
   <body>
+    <!-- ✅ Root Div for Vite/React -->
     <div id="root"></div>
+
+    <!-- ✅ Vite Main Script -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

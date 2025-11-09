@@ -1,8 +1,5 @@
 {
   "buildCommand": "npm install --legacy-peer-deps && npm run build",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
-  ],
   "headers": [
     {
       "source": "/sitemap.xml",
@@ -22,5 +19,8 @@
         }
       ]
     }
+  ],
+  "rewrites": [
+    { "source": "/((?!sitemap\\.xml|robots\\.txt).*)", "destination": "/" }
   ]
 }

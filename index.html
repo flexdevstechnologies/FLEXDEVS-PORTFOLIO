@@ -3,50 +3,36 @@
   <head>
     <!-- ✅ Basic Metadata -->
     <meta charset="UTF-8" />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "FlexDevs Technologies",
-        "url": "https://flexdevstechnologies.com/",
-        "logo": "https://flexdevstechnologies.com/FDtechlogo.png",
-        "description": "FlexDevs Technologies builds high-performance, responsive, and beautiful websites for startups and growing businesses.",
-        "sameAs": [
-          "https://www.linkedin.com/company/flexdevstechnologies",
-          "https://github.com/flexdevstechnologies"
-        ]
-      }
-    </script>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- ✅ SEO Meta -->
-    <title>FlexDevs Technologies | Web Development & UI/UX Experts</title>
+    <!-- ✅ Primary SEO -->
+    <title>
+      FlexDevs Technologies | Web Development Company in Chennai | Frontend &
+      UI/UX Experts
+    </title>
     <meta
       name="description"
-      content="FlexDevs Technologies crafts fast, modern, and responsive websites tailored for startups and growing businesses. Let's build your digital presence with stunning UI/UX and high-performance web apps."
+      content="FlexDevs Technologies is a professional web development company in Chennai, building high-performance websites, React applications, and modern UI/UX designs for startups and growing businesses."
     />
     <meta
       name="keywords"
-      content="FlexDevs Technologies, web development, UI UX design, React developers, Vite website, frontend agency, modern websites, business websites, Chennai web developers, responsive web design, FlexDevs"
+      content="FlexDevs, FlexDevs Technologies, Flexdevs, web development company Chennai, frontend developers, React web developers, UI/UX design, web design agency, modern websites, business websites, responsive web design"
     />
     <meta name="author" content="FlexDevs Technologies" />
-
-    <!-- ✅ Canonical URL -->
     <link rel="canonical" href="https://flexdevstechnologies.com/" />
 
-    <!-- ✅ Open Graph (Facebook, LinkedIn) -->
+    <!-- ✅ Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://flexdevstechnologies.com/" />
     <meta
       property="og:title"
-      content="FlexDevs Technologies | Web Development & UI/UX Experts"
+      content="FlexDevs Technologies | Web Development Company in Chennai | Frontend & UI/UX Experts"
     />
     <meta
       property="og:description"
-      content="We design and develop stunning, responsive websites that convert visitors into customers — tailored for startups and growing businesses."
+      content="We craft fast, modern, and responsive websites with React and beautiful UI/UX for startups and businesses in Chennai."
     />
     <meta
       property="og:image"
@@ -58,11 +44,11 @@
     <meta property="twitter:url" content="https://flexdevstechnologies.com/" />
     <meta
       property="twitter:title"
-      content="FlexDevs Technologies | Web Development & UI/UX Experts"
+      content="FlexDevs Technologies | Web Development Company in Chennai"
     />
     <meta
       property="twitter:description"
-      content="We design and develop stunning, responsive websites that convert visitors into customers — tailored for startups and growing businesses."
+      content="FlexDevs Technologies develops responsive websites, React applications, and modern UI/UX interfaces for startups and businesses."
     />
     <meta
       property="twitter:image"
@@ -71,11 +57,78 @@
 
     <!-- ✅ Favicon -->
     <link rel="icon" type="image/png" href="/FDtechlogo.png" />
+
+    <!-- ✅ Organization + LocalBusiness Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "FlexDevs Technologies",
+        "url": "https://flexdevstechnologies.com/",
+        "logo": "https://flexdevstechnologies.com/FDtechlogo.png",
+        "description": "FlexDevs Technologies builds high-performance, responsive, and modern websites for startups and growing businesses.",
+        "foundingDate": "2024",
+        "founder": {
+          "@type": "Person",
+          "name": "Rohith S"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Chennai",
+          "addressRegion": "Tamil Nadu",
+          "addressCountry": "IN"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "flexdevstechnologies@gmail.com"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/flexdevstechnologies",
+          "https://github.com/flexdevstechnologies"
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "FlexDevs Technologies",
+        "image": "https://flexdevstechnologies.com/FDtechlogo.png",
+        "url": "https://flexdevstechnologies.com/",
+        "telephone": "+91XXXXXXXXXX",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Chennai",
+          "addressRegion": "Tamil Nadu",
+          "addressCountry": "IN"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/flexdevstechnologies",
+          "https://github.com/flexdevstechnologies"
+        ]
+      }
+    </script>
   </head>
 
   <body>
-    <!-- ✅ Root Div for Vite/React -->
+    <!-- ✅ Root Div for React App -->
     <div id="root"></div>
+
+    <!-- ✅ SEO Text Section (helps ranking for partial matches) -->
+    <noscript>
+      <section id="about">
+        <h1>FlexDevs Technologies — Web Development Company in Chennai</h1>
+        <p>
+          FlexDevs Technologies is a <strong>web development company</strong> in
+          <strong>Chennai</strong> specializing in
+          <strong>ReactJS websites</strong>, <strong>frontend engineering</strong>, and
+          <strong>UI/UX design</strong>. We help startups and businesses build
+          fast, responsive, and visually stunning web solutions.
+        </p>
+      </section>
+    </noscript>
 
     <!-- ✅ Vite Main Script -->
     <script type="module" src="/src/main.jsx"></script>

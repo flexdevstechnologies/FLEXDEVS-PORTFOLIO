@@ -12,14 +12,17 @@
       FlexDevs Technologies | Web Development Company in Chennai | Frontend &
       UI/UX Experts
     </title>
+
     <meta
       name="description"
       content="FlexDevs Technologies is a professional web development company in Chennai, building high-performance websites, React applications, and modern UI/UX designs for startups and growing businesses."
     />
+
     <meta
       name="keywords"
       content="FlexDevs, FlexDevs Technologies, Flexdevs, web development company Chennai, frontend developers, React web developers, UI/UX design, web design agency, modern websites, business websites, responsive web design"
     />
+
     <meta name="author" content="FlexDevs Technologies" />
     <link rel="canonical" href="https://flexdevstechnologies.com/" />
 
@@ -36,7 +39,7 @@
     />
     <meta
       property="og:image"
-      content="https://flexdevstechnologies.com/FDtechlogo.png"
+      content="https://flexdevstechnologies.com/images/FDtechlogo.png"
     />
 
     <!-- ✅ Twitter Card -->
@@ -52,20 +55,24 @@
     />
     <meta
       property="twitter:image"
-      content="https://flexdevstechnologies.com/FDtechlogo.png"
+      content="https://flexdevstechnologies.com/images/FDtechlogo.png"
     />
 
     <!-- ✅ Favicon -->
-    <link rel="icon" type="image/png" href="/FDtechlogo.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/FDtechlogo.png"
+    />
 
-    <!-- ✅ Organization + LocalBusiness Structured Data -->
+    <!-- ✅ Organization Structured Data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "FlexDevs Technologies",
         "url": "https://flexdevstechnologies.com/",
-        "logo": "https://flexdevstechnologies.com/FDtechlogo.png",
+        "logo": "https://flexdevstechnologies.com/images/FDtechlogo.png",
         "description": "FlexDevs Technologies builds high-performance, responsive, and modern websites for startups and growing businesses.",
         "foundingDate": "2024",
         "founder": {
@@ -90,12 +97,13 @@
       }
     </script>
 
+    <!-- ✅ LocalBusiness Structured Data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "FlexDevs Technologies",
-        "image": "https://flexdevstechnologies.com/FDtechlogo.png",
+        "image": "https://flexdevstechnologies.com/images/FDtechlogo.png",
         "url": "https://flexdevstechnologies.com/",
         "telephone": "+91XXXXXXXXXX",
         "address": {
@@ -113,10 +121,10 @@
   </head>
 
   <body>
-    <!-- ✅ Root Div for React App -->
+    <!-- Root for React -->
     <div id="root"></div>
 
-    <!-- ✅ SEO Text Section (helps ranking for partial matches) -->
+    <!-- SEO fallback for No-JS -->
     <noscript>
       <section id="about">
         <h1>FlexDevs Technologies — Web Development Company in Chennai</h1>
@@ -130,7 +138,7 @@
       </section>
     </noscript>
 
-    <!-- ✅ Vite Main Script -->
+    <!-- Vite Main Script -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

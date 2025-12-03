@@ -8,39 +8,38 @@ export default function About() {
         <title>About Us — Flexdevs Technologies</title>
       </Helmet>
 
-      <section className="page-hero">
-        <h1>
-          We <span>Design Success</span> for Every Business
-        </h1>
-        <p>
-          At Flexdevs Technologies, we help small businesses thrive digitally
-          through exceptional frontend design and engineering expertise.
-        </p>
-      </section>
-
-      <section className="cards-grid">
-        <div className="info-card hover-animate">
-          <h3>🌍 Our Vision</h3>
-          <p>
-            To empower every brand — big or small — with a web presence that
-            builds trust, scales effortlessly, and leaves a mark.
+      <section className="section-wrapper">
+        <div className="section-inner">
+          <h1 className="section-title">Who We Are</h1>
+          <p className="section-subtitle">
+            A passionate team dedicated to building high-quality, user-focused digital experiences.
           </p>
-        </div>
 
-        <div className="info-card hover-animate">
-          <h3>💪 Our Approach</h3>
-          <p>
-            We merge creativity, performance, and strategy — delivering designs
-            that look great and perform even better.
-          </p>
-        </div>
+          <div className="atlas-grid">
+            <div className="atlas-card">
+              <div className="atlas-icon">🌍</div>
+              <h3>Our Vision</h3>
+              <p>
+                To help every business — big or small — grow with modern and meaningful digital presence.
+              </p>
+            </div>
 
-        <div className="info-card hover-animate">
-          <h3>🤝 Our Clients</h3>
-          <p>
-            From local startups to emerging enterprises, we partner with
-            businesses who believe in meaningful design and innovation.
-          </p>
+            <div className="atlas-card">
+              <div className="atlas-icon">💡</div>
+              <h3>Our Approach</h3>
+              <p>
+                We combine creativity, strategy, and engineering excellence to deliver the best results.
+              </p>
+            </div>
+
+            <div className="atlas-card">
+              <div className="atlas-icon">🤝</div>
+              <h3>Our Clients</h3>
+              <p>
+                We work with startups, professionals, and brands that value innovation and performance.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </>

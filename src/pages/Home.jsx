@@ -2,7 +2,7 @@ import "../styles/globals.css";
 
 export default function Home() {
   // Smooth scroll that compensates for sticky navbar height
-  const scrollToWithOffset = (id, offset = 80) => {
+  const scrollToWithOffset = (id, offset = 96) => {
     const el = document.getElementById(id);
     if (!el) return;
     const y = el.getBoundingClientRect().top + window.scrollY - offset;
@@ -11,7 +11,6 @@ export default function Home() {
 
   return (
     <>
-      {/* ===== HERO ===== */}
       <section className="hero" id="home">
         <div className="hero-container">
           <div className="hero-content">
@@ -27,7 +26,6 @@ export default function Home() {
             </p>
 
             <div className="hero-buttons">
-              {/* Get a Free Consultation → Contact section */}
               <button
                 className="hero-btn primary"
                 onClick={() => scrollToWithOffset("contact")}
@@ -35,7 +33,6 @@ export default function Home() {
                 Get a Free Consultation 🚀
               </button>
 
-              {/* View Our Work → Portfolio/Projects section */}
               <button
                 className="hero-btn secondary"
                 onClick={() => scrollToWithOffset("portfolio")}
@@ -45,8 +42,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Visual (kept as-is; you already hide it on mobile via CSS) */}
-          <div className="hero-visual">
+          {/* Visual */}
+          <div className="hero-visual" aria-hidden>
             <div className="cube">
               <div className="sphere"></div>
               <div className="ring ring1"></div>
@@ -56,7 +53,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* End HERO */}
     </>
   );
 }

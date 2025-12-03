@@ -5,72 +5,41 @@ export default function Contact() {
   return (
     <>
       <Helmet>
-        <title>Flexdevs Technologies</title>
+        <title>Contact — Flexdevs Technologies</title>
       </Helmet>
 
-      <section className="page-hero">
-        <h1>
-          Let’s <span>Collaborate and Build</span> Something Great
-        </h1>
-        <p>
-          Ready to take your business to the next level? Reach out — our team
-          will fuel your vision with cutting-edge frontend design.
-        </p>
-      </section>
+      <section className="section-wrapper">
+        <div className="section-inner">
+          <h1 className="section-title">Let’s Work Together</h1>
+          <p className="section-subtitle">
+            Have an idea or project in mind? Let’s bring it to life with modern UI engineering.
+          </p>
 
-      <section className="contact-section">
-        <form
-          action="https://api.web3forms.com/submit"
-          method="POST"
-          className="contact-form hover-animate"
-        >
-          {/* ✅ Web3Forms Access Key */}
-          <input
-            type="hidden"
-            name="access_key"
-            value="61da6a0b-51b9-40c6-8fe7-43808a9002c7"
-          />
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            className="contact-form hover-animate"
+            style={{ margin: "0 auto", marginTop: "35px", maxWidth: "600px" }}
+          >
+            <input type="hidden" name="access_key" value="61da6a0b-51b9-40c6-8fe7-43808a9002c7" />
 
-          {/* Full Name */}
-          <label>Full Name</label>
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            required
-          />
+            <label>Full Name</label>
+            <input type="text" name="name" required placeholder="Your Name" />
 
-          {/* Email */}
-          <label>Email</label>
-          <input
-            type="email"
-            name="email"
-            placeholder="you@business.com"
-            required
-          />
+            <label>Email</label>
+            <input type="email" name="email" required placeholder="you@business.com" />
 
-          {/* Mobile Number */}
-          <label>Mobile Number</label>
-          <input
-            type="tel"
-            name="phone"
-            placeholder="+91 98765 43210"
-            required
-          />
+            <label>Mobile Number</label>
+            <input type="tel" name="phone" required placeholder="+91 98765 43210" />
 
-          {/* Message */}
-          <label>Message</label>
-          <textarea
-            name="message"
-            rows="5"
-            placeholder="Tell us about your project..."
-          ></textarea>
+            <label>Message</label>
+            <textarea name="message" rows="5" placeholder="Tell us about your project..."></textarea>
 
-          {/* Submit Button */}
-          <button type="submit" className="hero-btn primary">
-            Send Message 🚀
-          </button>
-        </form>
+            <button type="submit" className="hero-btn primary" style={{ marginTop: "10px" }}>
+              Send Message 🚀
+            </button>
+          </form>
+        </div>
       </section>
     </>
   );

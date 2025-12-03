@@ -1024,3 +1024,55 @@ html, body { overflow-x: hidden; }
     flex-direction: row;
   }
 }
+/* Mobile nav menu fix */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 85px;  /* Below navbar */
+    right: 20px;
+    width: 200px;
+    background: rgba(20, 20, 35, 0.9);
+    padding: 15px 20px;
+    border-radius: 16px;
+    display: none;
+    flex-direction: column;
+    gap: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+  }
+
+  .nav-links.active {
+    display: flex !important;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+
+  .nav-cta {
+    display: none; /* Hide Work With Us button inside menu */
+  }
+}
+/* Prevent navbar overlap on mobile */
+@media (max-width: 768px) {
+  .navbar-header {
+    padding: 10px 0;
+  }
+
+  .hero {
+    padding-top: 120px; /* Adds space below navbar */
+  }
+
+  .hero-badge {
+    margin-top: 20px !important;
+  }
+}
+.menu-toggle {
+  margin-left: auto;
+  margin-right: 10px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+}

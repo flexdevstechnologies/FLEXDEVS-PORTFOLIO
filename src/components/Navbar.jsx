@@ -13,7 +13,7 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#home" className="navbar-logo" onClick={closeMenu}>
           <img src={logo} alt="FlexDevs Technologies Logo" className="logo-img" />
-          <span className="logo-text">Flexdevs Technologies</span>
+          <span className="logo-text">FLEXDEVS TECHNOLOGIES </span>
         </a>
 
         {/* Hamburger Button (mobile only) */}

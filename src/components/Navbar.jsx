@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import logo from "../assets/logo.png";
 
 export default function Navbar() {
@@ -7,17 +7,36 @@ export default function Navbar() {
   const toggleMenu = () => setMenuOpen((v) => !v);
   const closeMenu = () => setMenuOpen(false);
 
+  // ===== Scroll shrink effect for floating navbar =====
+  useEffect(() => {
+    const nav = document.querySelector(".floating-navbar");
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="navbar-header" role="banner" aria-label="Main Navigation">
+    <header
+      className="navbar-header floating-navbar"
+      role="banner"
+      aria-label="Main Navigation"
+    >
       <div className="navbar-container">
+        
         {/* Logo */}
         <a href="#home" className="navbar-logo" onClick={closeMenu}>
           <img src={logo} alt="FlexDevs Technologies Logo" className="logo-img" />
           <span className="logo-text">Flexdevs Technologies</span>
         </a>
 
-        {/* Desktop Links */}
-        <nav aria-label="Primary" style={{ display: "flex", alignItems: "center", gap: 12 }}>
+        {/* Desktop Navigation */}
+        <nav aria-label="Primary" className="desktop-nav">
           <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
             {["Home", "Services", "Portfolio", "About", "Contact"].map((page) => (
               <li key={page}>
@@ -31,12 +50,20 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <button className="nav-cta" onClick={() => { document.getElementById('contact')?.scrollIntoView({behavior:"smooth", block:"center"}); }}>
+
+          <button
+            className="nav-cta"
+            onClick={() =>
+              document
+                .getElementById("contact")
+                ?.scrollIntoView({ behavior: "smooth", block: "center" })
+            }
+          >
             Work with us
           </button>
         </nav>
 
-        {/* Mobile menu toggle */}
+        {/* Mobile toggle */}
         <button
           className="menu-toggle"
           onClick={toggleMenu}

@@ -20,7 +20,7 @@ export default function Footer() {
         <strong>Flexdevs Technologies</strong> — Creating seamless web experiences with
         React & modern UI engineering.
       </p>
-      <p>📧 flexdevstechnologies@gmail.com | 📞 +91-9842370274</p>
+      <p>📧 flexdevstechnologies@gmail.com | 📞 +91-9842370274 , 9344697820</p>
       <p>© {new Date().getFullYear()} Flexdevs Technologies. All rights reserved.</p>
 
       {/* Footer nav (same look, but scrolls instead of routing) */}

@@ -1076,3 +1076,48 @@ html, body { overflow-x: hidden; }
   border: none;
   color: white;
 }
+/* =============================== */
+/* PERFECT MOBILE NAV MENU FIX     */
+/* =============================== */
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 80px; /* BELOW NAVBAR */
+    right: 20px;
+    width: 75%;
+    background: rgba(25, 25, 40, 0.95);
+    backdrop-filter: blur(12px);
+    padding: 18px 22px;
+    border-radius: 18px;
+
+    display: none;             /* Hidden by default */
+    flex-direction: column;
+    gap: 18px;
+    z-index: 99999 !important; /* MOST IMPORTANT FIX */
+  }
+
+  /* When menuOpen = true */
+  .nav-links.active {
+    display: flex !important;
+  }
+
+  /* Mobile link styling */
+  .nav-link {
+    font-size: 1.1rem;
+    color: #fff;
+  }
+
+  /* Hide desktop CTA inside nav */
+  .nav-cta {
+    display: none;
+  }
+
+  /* Make sure navbar stays above everything */
+  .navbar-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100000 !important; /* Higher than everything */
+  }
+}

@@ -1196,3 +1196,296 @@ html, body { overflow-x: hidden; }
     font-size: 1.2rem;
   }
 }
+/* Floating navbar with spacing */
+.navbar-header {
+  position: sticky;
+  top: 18px; /* creates gap from the very top */
+  width: 100%;
+  z-index: 99999;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  background: rgba(15, 20, 40, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 20px; /* floating card feel */
+}
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: 0.3s color;
+}
+
+.nav-links li a:hover {
+  color: #7b5bff;
+}
+.nav-cta {
+  background: linear-gradient(90deg, #ff4ecd, #8a5bff);
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 16px;
+  transition: 0.3s ease;
+}
+
+.nav-cta:hover {
+  opacity: 0.85;
+}
+/* MOBILE MENU FIX */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+}
+
+/* Hide CTA on mobile */
+@media (max-width: 768px) {
+  .nav-cta {
+    display: none !important;
+  }
+}
+
+/* MOBILE NAVIGATION */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Hide desktop layout */
+  .nav-links {
+    display: none;
+  }
+
+  /* Dropdown visible when active */
+  .nav-links.active {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    width: 75%;
+    background: rgba(25, 25, 40, 0.95);
+    backdrop-filter: blur(12px);
+    padding: 20px;
+    border-radius: 18px;
+    gap: 18px;
+    z-index: 100000 !important;
+  }
+
+  .nav-links.active li a {
+    color: #fff;
+    font-size: 1.2rem;
+  }
+}
+/* ===========================
+   NAVBAR (Centered Layout)
+   =========================== */
+
+/* Outer floating header */
+.navbar-header {
+  position: sticky;            /* keeps visible while scrolling */
+  top: 18px;                   /* small gap from top */
+  width: 100%;
+  z-index: 120000;
+  padding: 6px 0;
+  display: block;
+}
+
+/* Container (three columns) */
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+/* LEFT: logo */
+.nav-left {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo-img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.04);
+  padding: 6px;
+}
+
+.logo-text {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  font-size: 0.98rem;
+  white-space: nowrap;
+}
+
+/* CENTER: nav (this area centers links on desktop) */
+.nav-center {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; /* allow clicks only on links, not the container */
+}
+
+.nav-links {
+  pointer-events: auto;
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+/* link styling */
+.nav-item {}
+
+.nav-link {
+  color: #e6eefb;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 8px 6px;
+  border-radius: 8px;
+  transition: color 0.18s ease, background 0.18s ease, transform 0.12s ease;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* RIGHT: CTA + hamburger */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 0 0 auto;
+}
+
+/* CTA button (visible on desktop) */
+.nav-cta {
+  background: linear-gradient(90deg, #ff4ecd, #8a5bff);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(138,91,255,0.08);
+  transition: transform .18s ease, opacity .18s ease;
+}
+
+.nav-cta:hover { transform: translateY(-2px); opacity: 0.95; }
+
+/* Hamburger - hidden on desktop */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+/* small visual tweak so the nav sits like a pill on the page */
+/* FLOATING NAVBAR — ALWAYS VISIBLE */
+.navbar-header {
+  position: fixed;          /* restored floating behavior */
+  top: 18px;                /* space from top */
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px); /* prevents touching screen edges */
+  max-width: 1280px;
+  z-index: 120000;
+  padding: 6px 0;
+  display: block;
+  border-radius: 24px;
+  background: rgba(8, 10, 20, 0.42);
+  backdrop-filter: blur(10px);
+}
+
+
+/* ----------------------------
+   RESPONSIVE: MOBILE (< 768px)
+   ---------------------------- */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 8px 16px;
+  }
+
+  /* hide the centered layout pointer-control */
+  .nav-center {
+    justify-content: flex-end;
+  }
+
+  /* show hamburger */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* hide desktop inline links on mobile (use dropdown) */
+  .nav-links {
+    display: none;
+  }
+
+  /* hide CTA on mobile (we show it in dropdown if wanted) */
+  .nav-cta {
+    display: none;
+  }
+
+  /* Mobile dropdown (when .active applied) */
+  .nav-links.active {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: calc(18px + 64px); /* below header (top gap + header height) */
+    right: 16px;
+    width: 78%;
+    max-width: 320px;
+    background: rgba(18,18,30,0.98);
+    backdrop-filter: blur(10px);
+    padding: 18px;
+    border-radius: 14px;
+    gap: 14px;
+    z-index: 200000 !important;
+    box-shadow: 0 12px 40px rgba(2,6,23,0.6);
+  }
+
+  .nav-links.active .nav-link {
+    color: #fff;
+    font-size: 1.05rem;
+    padding: 10px 8px;
+  }
+
+  /* ensure logo fits well */
+  .logo-text { font-size: 0.95rem; }
+  .logo-img { width: 40px; height: 40px; }
+}
